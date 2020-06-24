@@ -1,14 +1,15 @@
-pipeline{
-     agent { node { label "master"}}
+pipeline
+{
+     agent { node { label "master"}  }
      
      stages{
          stage("build"){
-             script{
-             
-                mvnhome = tool "M2"
-                sh "${mvnhome}/bin/mvn -v"
-             }
+           steps {
+              script {
+                 mvnhome = tool "M2"
+                 sh "${mvnhome}/bin/mvn -v"
+              }
+            }
          }
      }
-
 }
