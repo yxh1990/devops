@@ -5,7 +5,7 @@
 def tools = new org.devops.tools()
 //tools指代的是src/org/devops/tools.groovy脚本文件
 
-def ansible = new org.devop.ansible()
+def ansible = new org.devops.ansible()
 
 pipeline
 {
