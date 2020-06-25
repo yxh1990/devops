@@ -1,6 +1,6 @@
 #!groovy
 
-@Library("myjenkinslibrary") _ 
+@Library("myjenkinslib") _ 
 
 
 pipeline
