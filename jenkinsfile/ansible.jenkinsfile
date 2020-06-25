@@ -27,6 +27,7 @@ pipeline
    post {
         always {
              script{
+                  hello()
                   tools.PrintMes("这里是tools打印的.........")
              }
         }
