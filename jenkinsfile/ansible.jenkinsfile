@@ -2,6 +2,9 @@
 
 @Library("myjenkinslib@master") _ 
 
+def tools = new org.devops.tools()
+//tools指代的是src/org/devops/tools.groovy脚本文件
+
 
 pipeline
 {
@@ -13,8 +16,19 @@ pipeline
               script {
                  mvnhome = tool "M2"
                  sh "${mvnhome}/bin/mvn -v"
+                   
+                 
               }
             }
          }
      }
+     
+     
+   post {
+        always {
+             script{
+                  tools.PrintMes("这里是tools打印的.........")
+             }
+        }
+   }     
 }
