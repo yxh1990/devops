@@ -1,6 +1,6 @@
 #!groovy
 
-@Library("devops@master") _ 
+@Library("devops") _ 
 
 def ansible = new org.devops.deploy()
 
